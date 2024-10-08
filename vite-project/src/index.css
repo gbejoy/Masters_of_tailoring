@@ -22,13 +22,13 @@ html {
 
 .shadow-text-light {
     text-shadow:
-      2px 2px 0 #2b2b2b,
-      -2px -2px 0 #2b2b2b,
-      2px -2px 0 #2b2b2b,
-      -2px 2px 0 #2b2b2b,
-      0 2px 0 #2b2b2b,
-      2px 0 0 #2b2b2b,
-      0 -2px 0 #2b2b2b,
-      -2px 0 0 #2b2b2b,
-      2px 2px 5px #2b2b2b;
+      2px 2px 0 #161616,
+      -2px -2px 0 #161616,
+      2px -2px 0 #161616,
+      -2px 2px 0 #161616,
+      0 2px 0 #161616,
+      2px 0 0 #161616,
+      0 -2px 0 #161616,
+      -2px 0 0 #161616,
+      2px 2px 5px #161616;
 }

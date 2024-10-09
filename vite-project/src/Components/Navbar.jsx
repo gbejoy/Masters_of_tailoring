@@ -4,7 +4,7 @@ function Navbar({ isClicked, isLogged })
     const btnStyles = "text-[#F28928] text-[1rem] text-left font-semibold"
 
     return (
-        <div className={`p-1rem fixed top-full right-0 w-3/4 h-[calc(100svh-5rem)] bg-[#131313b5] backdrop-blur-[4px] md:hidden ${isClicked ? 'flex' : 'hidden'} flex-col items-start pl-[0.5rem] gap-[1rem] rounded-bl-[1.5rem]`}>
+        <div className={`p-1rem fixed top-full right-0 w-3/4 h-[calc(100svh-5rem)] bg-[#131313b5] backdrop-blur-[4px] md:hidden ${isClicked ? 'flex animated' : 'hidden'} flex-col items-start pl-[0.5rem] gap-[1rem] rounded-bl-[1.5rem]`}>
             <div className="text-stone-100 flex flex-col gap-1 pl-[1rem] lg:pl-[2rem] pt-[1rem]">
                 {!isLogged ? (
                     <>

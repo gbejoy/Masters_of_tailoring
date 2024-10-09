@@ -36,3 +36,22 @@ html {
       -2px 0 0 #161616,
       2px 2px 5px #161616;
 }
+
+@keyframes customAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(3px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation: customAnimation 0.3s ease-in-out forwards;
+}

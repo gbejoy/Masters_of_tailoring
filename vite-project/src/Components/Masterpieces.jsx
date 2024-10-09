@@ -8,7 +8,7 @@ export default function Masterpieces()
                 <img src="./decoration.png" />
             </div>
 
-            <div className="">
+            <div className="bg-[#221D1D] w-[98%] h-[80%] mx-auto rounded-[20px]">
                 <div className="">
                     <div className="">
                         

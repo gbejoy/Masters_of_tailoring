@@ -4,7 +4,7 @@ export default function About() {
     return (
         <section id="about" className="w-full h-screen bg-[#F2E7DC] flex flex-col md:flex-row items-center justify-center">
             {/* Image container */}
-            <div className="w-full h-[35%] md:w-1/3 md:h-full flex flex-row justify-center items-center gap-[1rem]">
+            <div className="w-full h-[30%] md:w-1/3 md:h-full flex flex-row justify-center items-center gap-[1rem]">
                 <img 
                     src={CollectionStar} 
                     alt="group" 
@@ -19,7 +19,7 @@ export default function About() {
                 <div className='text-left'>
                     <h1 className='hidden md:block font-Sail text-3xl xl:text-4xl text-left text-[#260502]'>Where Tailoring Meets Artistry</h1>
                 </div>
-                <div className='px-8 md:px-0 text-[1rem] font-Noto pt-[5rem] md:pt-[0] w-full xl:w-[80%] flex flex-col gap-[4rem] md:gap-[3rem] text-[#262626]'>
+                <div className='px-8 md:px-0 md:w-[90%] text-[1rem] pt-[1rem] md:pt-[0rem] font-Noto w-full xl:w-[80%] flex flex-col gap-[2rem] md:gap-[3rem] text-[#262626]'>
                     <p>
                     At <span className='text-[#F28928]'>Mastros</span>, we take pride in the timeless art of custom tailoring. Every piece of clothing is handmade with precision, ensuring a perfect fit that reflects your personal style. Our customers can provide their exact measurements, choose from a curated selection of fabrics and designs, or share their own creative vision with us.
                     </p>

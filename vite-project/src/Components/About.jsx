@@ -4,20 +4,23 @@ export default function About() {
     return (
         <section id="about" className="w-full h-screen bg-[#F2E7DC] flex flex-col md:flex-row items-center justify-center">
             {/* Image container */}
-            <div className="w-full h-[50%] md:w-1/3 md:h-full flex flex-row justify-center items-center">
+            <div className="w-full h-[30%] md:w-1/3 md:h-full flex flex-row justify-center items-center gap-[1rem]">
                 <img 
                     src={CollectionStar} 
                     alt="group" 
                     className="max-w-[80%] h-[80%] object-contain"
                 />
+                <div className='text-left'>
+                    <h1 className='md:hidden font-Sail text-3xl xl:text-4xl text-left'>Where Tailoring Meets Artistry</h1>
+                </div>
             </div>
 
-            <div className="w-full md:w-2/3 h-full flex flex-col justify-center gap-[2.5rem] xl:gap-[4rem]">
+            <div className="w-full md:w-2/3 h-[70%] md:h-full flex flex-col justify-center gap-[2.5rem] xl:gap-[4rem]">
                 <div className='text-left'>
-                    <h1 className='font-Sail text-3xl xl:text-4xl text-left'>Where Tailoring Meets Artistry</h1>
+                    <h1 className='hidden md:block font-Sail text-3xl xl:text-4xl text-left'>Where Tailoring Meets Artistry</h1>
                 </div>
-                <div className='text-[1rem] font-Noto w-[90%] xl:w-[80%] flex flex-col gap-[2rem]'>
-                    <p>
+                <div className='pl-4 text-[1rem] font-Noto w-[90%] xl:w-[80%] flex flex-col gap-[2rem]'>
+                    <p className=''>
                     At <span className='text-[#F28928]'>Mastros</span>, we take pride in the timeless art of custom tailoring. Every piece of clothing is handmade with precision, ensuring a perfect fit that reflects your personal style. Our customers can provide their exact measurements, choose from a curated selection of fabrics and designs, or share their own creative vision with us.
                     </p>
                     <p>

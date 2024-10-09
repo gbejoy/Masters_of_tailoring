@@ -1,17 +1,31 @@
+import { useState } from 'react';
 import Logo from "/Website-logo.png"
+import styles from './Header.module.css'
+import Navbar from './Navbar';
 
 function Header({ isLogged })
 {
+    const [ isHamClicked, setIsHamClicked ] = useState(false);
     const btnStyles = "capitalize backdrop-blur-lg rounded-[0.5rem] w-[5rem] py-2 bg-[#13131399] hover:text-[#F28928]";
-    const navItems = "capitalize text-lg text-stone-100 shadow-text-light hover:text-[#F28928]"
+    const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
+
+    function handleClickShow()
+    {
+        setIsHamClicked(prevState => !prevState);
+    }
 
     return (
         <header className="w-full h-[5rem] absolute top-0 left-0 flex flex-row bg-[#13131334] backdrop-blur-[4px] border-b-2 border-stone-100 items-center justify-between px-[1rem]">
             <div className="h-16 w-16 ">
                 <img src={ Logo } alt="Company's logo" />
             </div>
-            <div className={`hidden lg:flex lg:flex-row `}>
-                <dl className="flex flex-row items-center justify-center gap-[2rem] ">
+            <button className={`md:hidden ${styles.menuButton} ${isHamClicked ? styles.active : ''}`} onClick={handleClickShow}>
+                <div className={`${styles.menuIcon}`}></div>
+            </button>
+            <Navbar isClicked={isHamClicked} isLogged={isLogged} />
+
+            <div className={`hidden md:flex flex-row `}>
+                <dl className="flex flex-row items-center justify-center gap-[1.25rem] lg:gap-[2rem]">
                     <dd>
                         <a href="#about" className={ navItems }>
                             About
@@ -33,7 +47,7 @@ function Header({ isLogged })
                         </a>
                     </dd>
                 </dl>
-                <div className="text-stone-100 flex flex-row gap-2 pl-[2rem] ">
+                <div className="text-stone-100 flex flex-row gap-2 pl-[1rem] lg:pl-[2rem] ">
                     { !isLogged ? <>
                         <button className={btnStyles}>
                             Login

@@ -15,7 +15,7 @@ function Header({ isLogged })
     }
 
     return (
-        <header className="w-full h-[5rem] absolute top-0 left-0 flex flex-row bg-[#13131334] backdrop-blur-[4px] border-b-2 border-stone-100 items-center justify-between px-[1rem]">
+        <header className="w-full h-[5rem] absolute top-0 left-0 flex flex-row bg-[#13131334] backdrop-blur-[4px] border-b-2 border-stone-100 items-center justify-between px-[1rem] z-50">
             <div className="h-16 w-16 ">
                 <img src={ Logo } alt="Company's logo" />
             </div>

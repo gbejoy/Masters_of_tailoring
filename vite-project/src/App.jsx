@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LandingPage from "./Components/LandingPage";
+import About from "./Components/About";
 
 function App()
 {
@@ -7,6 +8,7 @@ function App()
     return (
       <>
         <LandingPage isLogged={isSignedIn} />
+        <About />
       </>
     )
 }

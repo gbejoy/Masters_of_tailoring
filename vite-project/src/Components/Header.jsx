@@ -10,7 +10,7 @@ function Header({ isLogged })
             <div className="h-16 w-16 ">
                 <img src={ Logo } alt="Company's logo" />
             </div>
-            <div className={`flex flex-row `}>
+            <div className={`hidden lg:flex lg:flex-row `}>
                 <dl className="flex flex-row items-center justify-center gap-[2rem] ">
                     <dd>
                         <a href="#about" className={ navItems }>

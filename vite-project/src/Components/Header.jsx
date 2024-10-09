@@ -22,8 +22,8 @@ function Header({ isLogged })
             <div>
                 <button className={`md:hidden ${styles.menuButton} ${isHamClicked ? styles.active : ''}`} onClick={handleClickShow}>
                     <div className={`${styles.menuIcon}`}></div>
-                    <Navbar isClicked={isHamClicked} isLogged={isLogged} />
                 </button>
+                <Navbar isClicked={isHamClicked} isLogged={isLogged} />
             </div>
             
             

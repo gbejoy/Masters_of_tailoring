@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Noto: ['Noto Sans', 'sans-serif'],
+        Sail: ["Sail", 'system-ui']
+      },
+    },
   },
   plugins: [],
 }

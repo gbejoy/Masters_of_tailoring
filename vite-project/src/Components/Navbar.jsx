@@ -1,15 +1,15 @@
 function Navbar({ isClicked, isLogged }) 
 {
     const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
-    const btnStyles = "text-stone-100"
+    const btnStyles = "text-[#F28928] text-[1rem] text-left font-semibold"
 
     return (
-        <div className={`fixed top-full right-0 w-3/4 h-[calc(100svh-5rem)] bg-[#13131396] backdrop-blur-[4px] md:hidden ${isClicked ? 'flex' : 'hidden'} flex-col items-start pl-[0.5rem] gap-[1rem]`}>
-            <div className="text-stone-100 flex flex-row gap-2 pl-[1rem] lg:pl-[2rem]">
+        <div className={`p-1rem fixed top-full right-0 w-3/4 h-[calc(100svh-5rem)] bg-[#131313b5] backdrop-blur-[4px] md:hidden ${isClicked ? 'flex' : 'hidden'} flex-col items-start pl-[0.5rem] gap-[1rem] rounded-bl-[1.5rem]`}>
+            <div className="text-stone-100 flex flex-col gap-1 pl-[1rem] lg:pl-[2rem] pt-[1rem]">
                 {!isLogged ? (
                     <>
-                        <button className={btnStyles}>Login</button>
                         <button className={btnStyles}>Sign Up</button>
+                        <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles}`}>Login In</button></p>
                     </>
                 ) : (
                     <div className="h-[3rem] pt-4 flex flex-row gap-2 items-center">
@@ -24,7 +24,7 @@ function Navbar({ isClicked, isLogged })
                     </div>
                 )}
             </div>
-            <dl className="flex flex-col gap-2 p-4">
+            <dl className="flex flex-col gap-2 p-4 text-left">
                 {
                     isLogged ? 
                     <>

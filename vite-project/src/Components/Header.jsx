@@ -15,14 +15,18 @@ function Header({ isLogged })
     }
 
     return (
-        <header className="w-full h-[5rem] absolute top-0 left-0 flex flex-row bg-[#13131334] backdrop-blur-[4px] border-b-2 border-stone-100 items-center justify-between px-[1rem] z-50">
+        <header className={`${isHamClicked ? 'bg-[#131313b5]' : 'bg-[#13131334]'} w-full h-[5rem] absolute top-0 left-0 flex flex-row  backdrop-blur-[4px] border-b-2 border-stone-100 items-center justify-between p-[1rem] z-50`}>
             <div className="h-16 w-16 ">
                 <img src={ Logo } alt="Company's logo" />
             </div>
-            <button className={`md:hidden ${styles.menuButton} ${isHamClicked ? styles.active : ''}`} onClick={handleClickShow}>
-                <div className={`${styles.menuIcon}`}></div>
-            </button>
-            <Navbar isClicked={isHamClicked} isLogged={isLogged} />
+            <div>
+                <button className={`md:hidden ${styles.menuButton} ${isHamClicked ? styles.active : ''}`} onClick={handleClickShow}>
+                    <div className={`${styles.menuIcon}`}></div>
+                    <Navbar isClicked={isHamClicked} isLogged={isLogged} />
+                </button>
+            </div>
+            
+            
 
             <div className={`hidden md:flex flex-row `}>
                 <dl className="flex flex-row items-center justify-center gap-[1.25rem] lg:gap-[2rem]">

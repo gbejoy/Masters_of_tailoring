@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import LandingPage from "./Components/LandingPage";
 import About from "./Components/About.jsx";
+import Masterpieces from "./Components/Masterpieces.jsx";
+import Products from "./Components/Products.jsx";
 
 function App()
 {
@@ -9,6 +11,8 @@ function App()
       <>
         <LandingPage isLogged={isSignedIn} />
         <About />
+        <Masterpieces />
+        <Products />
       </>
     )
 }

@@ -3,7 +3,7 @@ import Logo from '../assets/Website-logo.png';
 import styles from './Header.module.css'
 import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 function Header({ isLogged })
 {
@@ -69,13 +69,13 @@ function Header({ isLogged })
                         </button>
                         </>
                         :
-                        <div className="w-[4rem] h-[3rem] rounded-lg bg-[#13131334] relative">
+                        <div className="w-[4rem] h-[3rem] rounded-lg bg-[#13131334] relative px-2">
                             <div className='flex flex-row items-center'>
                                 <span className='w-[3rem] h-[3rem] rounded-full text-center flex items-center justify-center'><FontAwesomeIcon icon={faUser} className="text-stone-100 text-lg" /></span>
                                 <button className="w-[3rem] h-[3rem]" onClick={ handleUserMenu }><FontAwesomeIcon icon={faChevronDown} className="text-[#F28928] text-lg" /></button>
                             </div>
                             { showUserMenu ? 
-                                    <div className='flex flex-col gap-2 w-[15rem] absolute -left-[275%] bg-[#131313c7] p-4'>
+                                    <div className='flex flex-col gap-2 w-[15rem] absolute -left-[275%] bg-[#131313c7] p-4 rounded-[10px]'>
                                         <div className="h-[3rem] py-8 flex flex-row gap-2 items-center">
                                             <div className="bg-teal-600 rounded-full w-[3rem] h-[3rem]">
                                                 

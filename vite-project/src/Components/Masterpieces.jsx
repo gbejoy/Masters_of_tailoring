@@ -9,8 +9,8 @@ export default function Masterpieces()
             </div>
 
             <div className="bg-[#221D1D] w-[98%] h-[80%] mx-auto rounded-[20px]">
-                <div className="">
-                    <div className="">
+                <div className="h-full w-full ">
+                    <div className="h-[80%] w-[]">
                         
                     </div>
                     <div className="">

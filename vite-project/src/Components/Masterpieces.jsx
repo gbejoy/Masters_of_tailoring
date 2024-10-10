@@ -1,5 +1,9 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import ProductCard from './ProductCard';
+
 export default function Masterpieces()
-{
+{   
     return (
         <section id="products" className="bg-stone-100 h-svh w-full">
             <div className="h-[6rem] flex flex-row items-center justify-between px-[1.25rem]">
@@ -8,20 +12,12 @@ export default function Masterpieces()
                 <img src="./decoration.png" />
             </div>
 
-            <div className="bg-[#221D1D] w-[98%] h-[80%] mx-auto rounded-[20px]">
-                <div className="h-full w-full ">
-                    <div className="h-[80%] w-[]">
-                        
-                    </div>
-                    <div className="">
-
-                    </div>
-                    <div className="">
-
-                    </div>
-                    <div className="">
-
-                    </div>
+            <div className="bg-[#221D1D] w-[98%] h-[85%] mx-auto rounded-[20px]">
+                <div className="h-full w-full flex flex-col lg:flex-row items-center justify-evenly">
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    
                 </div>
             </div>
         </section>

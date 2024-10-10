@@ -18,7 +18,7 @@ export default function Masterpieces()
                     <ProductCard />
                     <ProductCard />
                 </div>
-                <div className='flex flex-row items-center h-full w-full justify-between px-4 absolute top-0 left-0'>
+                <div className='flex flex-row items-center h-full w-full justify-between px-1 md:px-4 absolute top-0 left-0'>
                     <FontAwesomeIcon icon={faChevronLeft} className="text-[#F28928] text-lg" />
                     <FontAwesomeIcon icon={faChevronRight} className="text-[#F28928] text-lg" />
                 </div>

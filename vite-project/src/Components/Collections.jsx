@@ -1,3 +1,7 @@
+import ProductCard from "./ProductCard";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
 export default function Collections()
 {
     return (
@@ -8,23 +12,15 @@ export default function Collections()
                 <img src="./decoration.png" />
             </div>
 
-            <div className="bg-stone-100 w-[98%] h-[80%] mx-auto rounded-[20px]">
-                <div className="">
-                    <div className="">
-                        
-                    </div>
-                    <div className="">
-
-                    </div>
-                    <div className="">
-
-                    </div>
-                    <div className="">
-
-                    </div>
-                    <div className="">
-
-                    </div>
+            <div className="bg-stone-100 w-[98%] h-[80%] mx-auto rounded-[20px] relative">
+                <div className="h-full w-full flex flex-col lg:flex-row items-center justify-evenly">
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                </div>
+                <div className='flex flex-row items-center h-full w-full justify-between px-4 absolute top-0 left-0'>
+                    <FontAwesomeIcon icon={faChevronLeft} className="text-[#221D1D] text-lg" />
+                    <FontAwesomeIcon icon={faChevronRight} className="text-[#221D1D] text-lg" />
                 </div>
             </div>
         </section>

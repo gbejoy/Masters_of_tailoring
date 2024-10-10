@@ -12,12 +12,15 @@ export default function Masterpieces()
                 <img src="./decoration.png" />
             </div>
 
-            <div className="bg-[#221D1D] w-[98%] h-[85%] mx-auto rounded-[20px]">
+            <div className="bg-[#221D1D] w-[98%] h-[85%] mx-auto rounded-[20px] relative">
                 <div className="h-full w-full flex flex-col lg:flex-row items-center justify-evenly">
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
-                    
+                </div>
+                <div className='flex flex-row items-center h-full w-full justify-between px-4 absolute top-0 left-0'>
+                    <FontAwesomeIcon icon={faChevronLeft} className="text-[#F28928] text-lg" />
+                    <FontAwesomeIcon icon={faChevronRight} className="text-[#F28928] text-lg" />
                 </div>
             </div>
         </section>

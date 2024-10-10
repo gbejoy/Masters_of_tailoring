@@ -9,7 +9,7 @@ function Navbar({ isClicked, isLogged })
                 {!isLogged ? (
                     <>
                         <button className={btnStyles}>Sign Up</button>
-                        <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles}`}>Login In</button></p>
+                        <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles}`}>Login</button></p>
                     </>
                 ) : (
                     <div className="h-[3rem] pt-4 flex flex-row gap-2 items-center">
@@ -61,6 +61,18 @@ function Navbar({ isClicked, isLogged })
                         Contact
                     </a>
                 </dd>
+
+                {
+                    isLogged ? 
+                    <>
+                        <dd>
+                            <a href="#about" className={navItems}>
+                                Log Out
+                            </a>
+                        </dd>
+                    </>
+                    : ''
+                }
             </dl>
         </div>
     )

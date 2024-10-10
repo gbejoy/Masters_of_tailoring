@@ -19,10 +19,10 @@ export default function Collections()
                     <ProductCard />
                 </div>
                 <div className='flex flex-row items-center h-full w-full justify-between px-1 md:px-4 absolute top-0 left-0'>
-                    <button className="p-1 flex items-center">
+                    <button className="md:p-1 flex items-center">
                         <FontAwesomeIcon icon={faChevronLeft} className="text-[#221D1D] text-lg" />
                     </button>
-                    <button className="p-1 flex items-center">
+                    <button className="md:p-1 flex items-center">
                         <FontAwesomeIcon icon={faChevronRight} className="text-[#221D1D] text-lg" />
                     </button>                   
                 </div>

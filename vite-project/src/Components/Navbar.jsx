@@ -9,7 +9,7 @@ function Navbar({ isClicked, isLogged })
                 {!isLogged ? (
                     <>
                         <button className={btnStyles}>Sign Up</button>
-                        <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles}`}>Login</button></p>
+                        <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles} text-[0.75rem]`}>Login</button></p>
                     </>
                 ) : (
                     <div className="h-[3rem] pt-4 flex flex-row gap-2 items-center">

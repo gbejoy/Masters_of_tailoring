@@ -6,7 +6,7 @@ import Collections from "./Components/Collections.jsx";
 
 function App()
 {
-  const [ isSignedIn, setIsSignedIn ] = useState(false);
+  const [ isSignedIn, setIsSignedIn ] = useState(true);
     return (
       <>
         <LandingPage isLogged={isSignedIn} />

@@ -1,6 +1,6 @@
 function Navbar({ isClicked, isLogged }) 
 {
-    const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
+    const navItems = "capitalize text-[1.25rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928] leading-10";
     const btnStyles = "text-[#F28928] text-[1rem] text-left font-semibold"
 
     return (
@@ -14,7 +14,7 @@ function Navbar({ isClicked, isLogged })
                 ) : (
                     <div className="h-[3rem] pt-4 flex flex-row gap-2 items-center">
                         <div className="bg-teal-600 rounded-full w-[3rem] h-[3rem]">
-                            <img src="" />
+                            
                         </div>
                         <div className="flex flex-col gap-0">
                             <h1 className="text-[1rem]">Name</h1>
@@ -29,12 +29,12 @@ function Navbar({ isClicked, isLogged })
                     isLogged ? 
                     <>
                         <dd>
-                            <a href="#about" className={navItems}>
+                            <a className={navItems}>
                                 My Cart
                             </a>
                         </dd>
                         <dd>
-                            <a href="#about" className={navItems}>
+                            <a className={navItems}>
                                 My Wishlist
                             </a>
                         </dd>

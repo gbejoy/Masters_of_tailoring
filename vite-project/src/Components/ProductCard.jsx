@@ -10,11 +10,11 @@ export default function ProductCard()
                 <div>
                     <h1 className='text-2xl text-[#F28928]'>Dragon Suit</h1>
                     <p className='text-[0.5rem] pb-4'>~Year of the Dragon Collection </p>
-                    <p className='text-[0.5rem] lg:text-[0.75rem] pb-2'>The Red Dragon Suit for men exudes bold elegance, featuring intricate dragon motifs and a rich crimson hue, perfect for making a powerful statement at any formal event.</p>                    
+                    <p className='text-[0.5rem] lg:text-[10px] pb-2'>The Red Dragon Suit for men exudes bold elegance, featuring intricate dragon motifs and a rich crimson hue, perfect for making a powerful statement at any formal event.</p>                    
                 </div>
                 <div className='flex justify-between'>
                     <h2 className='text-[0.75rem]'>Price: $1200</h2>
-                    <button className='text-[#F28928] backdrop-blur-[6px] hover:text-stone-100 text-[0.75rem]'>Add to Cart</button>
+                    <button className='text-[#F28928] backdrop-blur-[6px] hover:text-stone-100 text-[0.75rem]'>View</button>
                 </div>           
             </div>
         </div>

@@ -1,10 +1,11 @@
 import TailorShop from "../assets/Tailor_shop_interior.jpg"
 import Logo from '../assets/Website-logo.png';
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 
 
 export default function Register()
 {
+    const [ isIncomplete, setIsIncomplete ] = useState(false)
     const [formData, setFormData ] = useState(
         {
             email: '',
@@ -24,6 +25,27 @@ export default function Register()
         ));
         console.log(formData);
     }
+
+    function handleRegister() {
+        // Check for a valid email, password length, and if the username is provided
+        if (
+            !(formData.email.includes('@')) ||
+            !(formData.email.includes('.')) ||
+            formData.email.length < 8 ||
+            formData.password.length < 8 ||
+            (formData.username.length() < 4)
+        )
+            setIsIncomplete(true);
+        else {
+            /* // Add user data to localStorage
+            const user = Math.random();
+            localStorage.setItem('user', JSON.stringify(formData));
+            */
+            setIsIncomplete(false); 
+        }
+    }
+    
+
     return (
         <section className="bg-[#180101] min-h-screen w-full flex flex-row items-center justify-center">
             <div className="bg-stone-100 w-[75vw] md:w-[50vw] lg:w-[75%] h-[80vh] flex flex-row items-center rounded-[10px]">
@@ -76,8 +98,8 @@ export default function Register()
                             />
                         </p>
 
-                        <p className="w-[90%] text-right pb-8">
-                            <button className="bg-[#262626] text-stone-100 px-4 py-2 rounded-md">
+                        <p className="w-[90%] text-right pb-8 ">
+                            <button className="bg-[#262626] text-stone-100 px-4 py-2 rounded-md" onClick={ handleRegister }>
                                 <a href="/login">
                                     Register
                                 </a>

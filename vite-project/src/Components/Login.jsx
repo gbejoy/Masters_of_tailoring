@@ -23,6 +23,11 @@ export default function Login()
         console.log(formData);
     }
 
+    function handleLogin()
+    {
+
+    }
+
     return (
         <section className="bg-[#180101] min-h-screen min-w-full flex flex-row items-center justify-center font-serif">
             <div className="bg-stone-100 w-[75vw] md:w-[50vw] lg:w-[75%] h-[80vh] flex flex-row items-center rounded-[10px]">
@@ -64,7 +69,7 @@ export default function Login()
                         </p>
 
                         <p className="w-[90%] text-right pb-4">
-                            <button className="bg-[#262626] text-stone-100 px-4 py-2 rounded-md">
+                            <button className="bg-[#262626] text-stone-100 px-4 py-2 rounded-md" onClick={ handleLogin }>
                                 <a href="/">
                                     Login
                                 </a>

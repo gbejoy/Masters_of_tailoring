@@ -1,10 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Site from "./Components/Site";
-import Register from "./Components/Register";
-import Login from "./Components/Login";
-import MainProductPage from "./Components/MainProductPage";
-import { useState } from 'react';
-
+import React, { useState } from "react";
+import LandingPage from "./Components/LandingPage";
+import About from "./Components/About.jsx";
+import Masterpieces from "./Components/Masterpieces.jsx";
+import Collections from "./Components/Collections.jsx";
 
 function App()
 {

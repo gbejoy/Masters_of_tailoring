@@ -12,8 +12,8 @@ export default function Collections()
                 <img src="./decoration.png" />
             </div>
 
-            <div className="bg-stone-100 w-[98%] h-[80%] mx-auto rounded-[20px] relative">
-                <div className="h-full w-full flex flex-col lg:flex-row items-center justify-evenly">
+            <div className="bg-stone-100 w-[98%] h-[85%] mx-auto rounded-[20px] relative">
+                <div className="h-full w-full flex flex-col xl:flex-row items-center justify-evenly">
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />

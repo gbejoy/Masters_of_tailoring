@@ -4,7 +4,6 @@ import Masterpieces from "./Masterpieces.jsx";
 import Collections from "./Collections.jsx";
 import Materials from "./materials.jsx";
 
-
 function Site({ isSignedIn })
 {
     return (

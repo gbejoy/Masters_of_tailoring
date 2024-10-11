@@ -49,9 +49,8 @@ export default function Register()
     return (
         <section className="bg-[#180101] min-h-screen w-full flex flex-row items-center justify-center">
             <div className="bg-stone-100 w-[75vw] md:w-[50vw] lg:w-[75%] h-[80vh] flex flex-row items-center rounded-[10px]">
-                <div className="hidden lg:block w-[50%] h-full relative">
+                <div className="hidden lg:block w-[50%] h-full">
                     <img src={TailorShop} className="w-full h-full rounded-l-[10px]"/>
-                    <h1 className="text-stone-100 shadow-text-light text-center w-full absolute top-[92%] left-[50%] -translate-x-[50%] whitespace-nowrap text-lg py-2 blur-background">Don't have an account, <span className="text-[#F28928] cursor-pointer whitespace-wrap"><a href="/register">Register Now</a></span>.</h1>
                 </div>
                 
                 <div className="w-full lg:w-[50%] h-full py-[1rem] px-[1rem]">

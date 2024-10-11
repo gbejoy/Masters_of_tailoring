@@ -67,3 +67,7 @@ html {
 .animated {
     animation: customAnimation 0.3s ease-in-out forwards;
 }
+
+.blur-background {
+    backdrop-filter: blur(10px);
+}

@@ -9,7 +9,7 @@ function Header({ isLogged })
 {
     const [ isHamClicked, setIsHamClicked ] = useState(false);
     const [ showUserMenu, setShowUserMenu ] = useState(false);
-    const btnStyles = "capitalize backdrop-blur-[24px] rounded-[0.5rem] w-[5rem] py-2 bg-[#13131333] hover:text-[#F28928] shadow-text-light";
+    const btnStyles = "capitalize blur-background rounded-[0.5rem] w-[5rem] py-2 bg-[#13131333] hover:text-[#F28928] shadow-text-light";
     const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
 
     function handleClickShow()
@@ -62,10 +62,14 @@ function Header({ isLogged })
                 <div className="text-stone-100 flex flex-row gap-2 pl-[1rem] lg:pl-[2rem] ">
                     { !isLogged ? <>
                         <button className={btnStyles}>
-                            Login
+                            <a href='/login' className='w-full h-full active:text-stone-100'>
+                                Login
+                            </a>
                         </button>
                         <button className={btnStyles}>
-                            Sign Up
+                            <a href='/register' className='w-full h-full active:text-stone-100'>
+                                Sign Up
+                            </a>
                         </button>
                         </>
                         :

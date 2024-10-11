@@ -8,8 +8,16 @@ function Navbar({ isClicked, isLogged })
             <div className="text-stone-100 flex flex-col gap-1 pl-[1rem] lg:pl-[2rem] pt-[1rem]">
                 {!isLogged ? (
                     <>
-                        <button className={btnStyles}>Sign Up</button>
-                        <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles} text-[0.75rem]`}>Login</button></p>
+                        <button className={btnStyles}>
+                            <a href='/register' className='w-full h-full active:text-stone-100'>
+                                Sign Up
+                            </a>
+                        </button>
+                        <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles} text-[0.75rem]`}>
+                            <a href='/login' className='w-full h-full active:text-stone-100'>
+                                Login
+                            </a>
+                            </button></p>
                     </>
                 ) : (
                     <div className="h-[3rem] pt-4 flex flex-row gap-2 items-center">

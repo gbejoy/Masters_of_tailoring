@@ -3,6 +3,7 @@ import LandingPage from "./Components/LandingPage";
 import About from "./Components/About.jsx";
 import Masterpieces from "./Components/Masterpieces.jsx";
 import Collections from "./Components/Collections.jsx";
+import Materials from "./Components/materials.jsx";
 
 function App()
 {
@@ -13,6 +14,7 @@ function App()
         <About />
         <Masterpieces />
         <Collections />
+        <Materials/>
       </>
     )
 }

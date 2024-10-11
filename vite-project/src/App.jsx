@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Site from "./Components/Site";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
+import { useState } from 'react';
 
 function App()
 {
@@ -30,6 +31,7 @@ function App()
       <RouterProvider router={router} />
     </>
   )
+
 
 }
 

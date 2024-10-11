@@ -37,7 +37,7 @@ function Navbar({ isClicked, isLogged })
                     isLogged ? 
                     <>
                         <dd>
-                            <a className={navItems}>
+                            <a className={navItems} href="/cart">
                                 My Cart
                             </a>
                         </dd>

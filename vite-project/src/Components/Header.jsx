@@ -92,7 +92,7 @@ function Header({ isLogged })
 
                                         <dl className="flex flex-col gap-2 py-4 text-left border-t-2 border-[#F28928] cursor-pointer">
                                             <dd>
-                                                <a className={navItems}>
+                                                <a className={navItems} href="/cart">
                                                     My Cart
                                                 </a>
                                             </dd>
@@ -102,7 +102,7 @@ function Header({ isLogged })
                                                 </a>
                                             </dd>
                                             <dd>
-                                                <a className={navItems}>
+                                                <a className={navItems} href='/login'>
                                                     Log Out
                                                 </a>
                                             </dd>

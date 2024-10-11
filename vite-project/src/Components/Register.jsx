@@ -5,6 +5,25 @@ import React, { useState, useRef } from "react"
 
 export default function Register()
 {
+    const [formData, setFormData ] = useState(
+        {
+            email: '',
+            username: '',
+            password: ''
+        }
+    )
+
+    function handleChange(event)
+    {
+        const { name, value } = event.target;
+        setFormData(prevState => (
+            {
+                ...prevState,
+                [name]: value
+            }
+        ));
+        console.log(formData);
+    }
     return (
         <section className="bg-[#180101] min-h-screen w-full flex flex-row items-center justify-center">
             <div className="bg-stone-100 w-[75vw] md:w-[50vw] lg:w-[75%] h-[80vh] flex flex-row items-center rounded-[10px]">
@@ -23,7 +42,8 @@ export default function Register()
                             </label>
                             <input 
                                 type="email" 
-                                id="username" 
+                                id="email" 
+                                onChange={ handleChange }
                                 className="bg-stone-300 w-[80%] h-[2rem] focus:outline-none border-[#180101] rounded-md px-2 focus:border-b-2"
                                 autoComplete="username"
                             />
@@ -34,7 +54,9 @@ export default function Register()
                             </label>
                             <input 
                                 type="text" 
-                                id="username" 
+                                id="username"
+                                name="username"
+                                onChange={ handleChange }
                                 className="bg-stone-300 w-[80%] h-[2rem] focus:outline-none border-[#180101] rounded-md px-2 focus:border-b-2"
                                 autoComplete="username"
                             />
@@ -47,6 +69,8 @@ export default function Register()
                             <input 
                                 type="password" 
                                 id="password" 
+                                name="password"
+                                onChange={ handleChange }
                                 className="bg-stone-300 w-[80%] h-[2rem] focus:outline-none border-[#180101] rounded-md px-2 focus:border-b-2"
                                 autoComplete="current-password"
                             />

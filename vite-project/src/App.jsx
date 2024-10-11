@@ -1,9 +1,10 @@
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Site from "./Components/Site";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
+import MainProductPage from "./Components/MainProductPage";
 import { useState } from 'react';
+
 
 function App()
 {
@@ -23,6 +24,12 @@ function App()
       path: '/login',
       element: <Login />
     },
+    {
+      path: '/product',
+      element: <>
+                  <MainProductPage />
+              </>
+  }
 
   ])
   

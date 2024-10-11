@@ -3,6 +3,7 @@ import Suit1 from "../assets/Dragon-suit.png"
 export default function ProductCard()
 {
     const cardStyles = "h-[30%] w-[90%] xl:h-[90%] xl:w-[25%] bg-[#B7B7B7] rounded-[10px] xl:rounded-[20px] relative";
+
     return (
         <div className={cardStyles}>
             <img src={Suit1} className='xl:w-full h-full w-[40%] object-contain rounded-[20px]' />
@@ -14,7 +15,11 @@ export default function ProductCard()
                 </div>
                 <div className='flex justify-between'>
                     <h2 className='text-[1rem] lg:text-[1.25rem]'>Price: $1200</h2>
-                    <button className='text-[#F28928] backdrop-blur-[6px] hover:text-stone-100 text-[1rem] lg:text-[1.25rem]'>View</button>
+                    <button className='text-[#F28928] backdrop-blur-[6px] hover:text-stone-100 text-[1rem] lg:text-[1.25rem] cursor-pointer z-10'>
+                        <a href="/product">
+                            View
+                        </a>
+                    </button>
                 </div>           
             </div>
         </div>

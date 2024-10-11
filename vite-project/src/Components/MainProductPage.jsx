@@ -13,7 +13,6 @@ export default function MainProductPage()
     const handleChange = (e) => 
         {
             const { name, value } = e.target;
-            // Only allow numeric input with one decimal precision
             const formattedValue = value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
             setMeasurements({
             ...measurements,
@@ -26,9 +25,6 @@ export default function MainProductPage()
        // Back-end
        console.log(measurements);
     };
-    /* const location = useLocation();
-    const { id } = useParams(); // Get the product ID from the URL
-    const product = location.state?.product; // Access product data from state if available */
 
   return (
         <section className="bg-[#180101] h-svh w-full flex items-center justify-center font-Noto text-[#262626]">

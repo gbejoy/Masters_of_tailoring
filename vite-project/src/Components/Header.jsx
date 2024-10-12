@@ -100,13 +100,13 @@ function Header({ isLogged })
                 <div className="text-stone-100 flex flex-row gap-2 pl-[1rem] lg:pl-[2rem] ">
                     { !isLogged ? <>
                         <button 
-                            className={btnStyles}
+                            className="capitalize rounded-[0.5rem] w-[5rem] py-2 bg-[#F28928] hover:bg-[#f28928aa] shadow-text-light bg-opacity-0.35"
                             onClick={ handleLogin }
                         >
                             Login
                         </button>
                         <button 
-                            className={btnStyles}
+                            className="capitalize rounded-[0.5rem] w-[5rem] py-2 bg-[#F28928] hover:bg-[#f28928aa] shadow-text-light bg-opacity-0.35"
                             onClick={ handleRegister }    
                         >
                             Sign Up

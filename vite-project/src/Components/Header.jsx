@@ -11,13 +11,14 @@ function Header({ isLogged })
     const [ isHamClicked, setIsHamClicked ] = useState(false);
     const [ showUserMenu, setShowUserMenu ] = useState(false);
     const menuRef = useRef(null);
+    const btnRef = useRef(null);
     const navigate = useNavigate();
     const btnStyles = "capitalize blur-background rounded-[0.5rem] w-[5rem] py-2 bg-[#13131333] hover:text-[#F28928] shadow-text-light";
     const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if (menuRef.current && !menuRef.current.contains(event.target) && !btnRef.current.contains(event.target)) {
                 setShowUserMenu(false);
             }
         };
@@ -115,7 +116,13 @@ function Header({ isLogged })
                         <div className="w-[4rem] h-[3rem] rounded-lg bg-[#13131334] relative px-2">
                             <div className='flex flex-row items-center'>
                                 <span className='w-[3rem] h-[3rem] rounded-full text-center flex items-center justify-center'><FontAwesomeIcon icon={faUser} className="text-stone-100 text-lg" /></span>
-                                <button className="w-[3rem] h-[3rem]" onClick={ handleUserMenu }><FontAwesomeIcon icon={faChevronDown} className="text-[#F28928] text-lg" /></button>
+                                <button 
+                                    className="w-[3rem] h-[3rem]" 
+                                    onClick={ handleUserMenu }
+                                    ref={btnRef}    
+                                >
+                                    <FontAwesomeIcon icon={faChevronDown} className="text-[#F28928] text-lg" />
+                                </button>
                             </div>
                             { showUserMenu ? 
                                     <div className='flex flex-col gap-2 w-[15rem] absolute -left-[275%] bg-[#131313c7] p-4 rounded-[10px]' ref={menuRef}>

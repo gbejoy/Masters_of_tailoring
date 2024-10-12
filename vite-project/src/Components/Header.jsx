@@ -61,7 +61,7 @@ function Header({ isLogged })
     }
 
     return (
-        <header className={`${isHamClicked ? 'bg-[#131313b5] animated' : 'bg-[#13131334]'} w-full h-[5rem] absolute top-0 left-0 flex flex-row  backdrop-blur-[4px] border-b-[2px] border-stone-100 items-center justify-between p-[1rem] z-50`}>
+        <header className={`${isHamClicked ? 'bg-[#131313b5] animated' : 'bg-[#13131344]'} w-full h-[5rem] absolute top-0 left-0 flex flex-row  backdrop-blur-[4px] border-b-[2px] border-stone-100 items-center justify-between p-[1rem] z-50`}>
             <div className="h-16 w-16 ">
                 <img src={ Logo } alt="Company's logo" />
             </div>

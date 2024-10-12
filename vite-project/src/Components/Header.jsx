@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/Website-logo.png';
 import styles from './Header.module.css'
@@ -10,9 +10,28 @@ function Header({ isLogged })
 {
     const [ isHamClicked, setIsHamClicked ] = useState(false);
     const [ showUserMenu, setShowUserMenu ] = useState(false);
+    const menuRef = useRef(null);
     const navigate = useNavigate();
     const btnStyles = "capitalize blur-background rounded-[0.5rem] w-[5rem] py-2 bg-[#13131333] hover:text-[#F28928] shadow-text-light";
     const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setShowUserMenu(false);
+            }
+        };
+
+        if (showUserMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        // Remove event listener when the component is unmounted or menu is hidden
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showUserMenu]);
+    
 
     function handleClickShow()
     {
@@ -99,11 +118,11 @@ function Header({ isLogged })
                                 <button className="w-[3rem] h-[3rem]" onClick={ handleUserMenu }><FontAwesomeIcon icon={faChevronDown} className="text-[#F28928] text-lg" /></button>
                             </div>
                             { showUserMenu ? 
-                                    <div className='flex flex-col gap-2 w-[15rem] absolute -left-[275%] bg-[#131313c7] p-4 rounded-[10px]'>
+                                    <div className='flex flex-col gap-2 w-[15rem] absolute -left-[275%] bg-[#131313c7] p-4 rounded-[10px]' ref={menuRef}>
                                         <div className="h-[3rem] py-8 flex flex-row gap-2 items-center">
-                                            <div className="bg-teal-600 rounded-full w-[3rem] h-[3rem]">
-                                                
-                                            </div>
+                                        <div className="bg-amber-700 rounded-full w-[3rem] h-[3rem] flex flex-row items-center justify-center">
+                                            <FontAwesomeIcon icon={faUser} />
+                                        </div>
                                             <div className="flex flex-col gap-0 cursor-default">
                                                 <h1 className="text-[1rem]">Name</h1>
                                                 <p className="text-[0.75rem]">Account No</p>

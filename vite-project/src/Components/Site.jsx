@@ -4,7 +4,8 @@ import Masterpieces from "./Masterpieces.jsx";
 import Collections from "./Collections.jsx";
 import Materials from "./Materials.jsx";
 import Contact from "./Contact.jsx";
-import Bottom from "./Bottom.jsx";
+import Footer from "./Footer.jsx";
+
 function Site({ isSignedIn })
 {
     return (
@@ -15,7 +16,7 @@ function Site({ isSignedIn })
           <Collections />
           <Materials />
           <Contact />
-          <Bottom />
+          <Footer />
         </>
       )
 }

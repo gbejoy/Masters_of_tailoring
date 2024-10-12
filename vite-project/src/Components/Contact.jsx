@@ -51,8 +51,7 @@ export default function Contact()
                             className="bg-stone-300 shadow appearance-none rounded h-[2.5rem] md:h-[5rem] lg:h-[10rem] p-1 md:p-2 w-[80%]  focus:outline-none focus:border-b-2 focus:border-[#F28928]"
                             id="message" 
                             type="text" 
-                            name="decrription"
-                            placeholder="Type your message here"
+                            name="decription"
                             required
                         />
                     </p>

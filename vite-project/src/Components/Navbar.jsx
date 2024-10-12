@@ -32,7 +32,7 @@ function Navbar({ isClicked, isLogged })
                     </>
                 ) : (
                     <div className="h-[3rem] pt-4 flex flex-row gap-2 items-center">
-                        <div className="bg-amber-900 rounded-full w-[3rem] h-[3rem] flex flex-row items-center justify-center">
+                        <div className="bg-amber-700 rounded-full w-[3rem] h-[3rem] flex flex-row items-center justify-center">
                             <FontAwesomeIcon icon={faUser} />
                         </div>
                         <div className="flex flex-col gap-0">

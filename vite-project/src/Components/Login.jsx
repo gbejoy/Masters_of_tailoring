@@ -100,11 +100,10 @@ export default function Login()
                                 Login
                             </button>
                         </p>
-
-                        <p className="w-[100%] text-[#F28928] text-center pb-4">
-                            <button className="" onClick={handleToSite}>Back to Site</button>
-                        </p>
                         <p className="lg:hidden text-center">Don't have an account, <span className="text-[#F28928] cursor-pointer"><button onClick={handleToRegister}>Register Now</button></span>.</p>
+                        <p className="w-[100%] text-[#F28928] text-center pt-2 pb-2">
+                            <button onClick={handleToSite}>Back to Site</button>
+                        </p>
                     </form>
                 </div>
             </div>

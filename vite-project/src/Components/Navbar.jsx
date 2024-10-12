@@ -1,7 +1,18 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom';
+
 function Navbar({ isClicked, isLogged }) 
 {
     const navItems = "capitalize text-[1.25rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928] leading-10";
     const btnStyles = "text-[#F28928] text-[1rem] text-left font-semibold"
+
+    const navigate = useNavigate();
+    function handleLogout()
+    {
+        // Logout
+        navigate('/login')
+    }
 
     return (
         <div className={`p-1rem fixed top-full right-0 w-3/4 h-[calc(100svh-5rem)] bg-[#131313b5] backdrop-blur-[4px] md:hidden ${isClicked ? 'flex animated' : 'hidden'} flex-col items-start pl-[0.5rem] gap-[1rem] rounded-bl-[1.5rem]`}>
@@ -21,8 +32,8 @@ function Navbar({ isClicked, isLogged })
                     </>
                 ) : (
                     <div className="h-[3rem] pt-4 flex flex-row gap-2 items-center">
-                        <div className="bg-teal-600 rounded-full w-[3rem] h-[3rem]">
-                            
+                        <div className="bg-amber-900 rounded-full w-[3rem] h-[3rem] flex flex-row items-center justify-center">
+                            <FontAwesomeIcon icon={faUser} />
                         </div>
                         <div className="flex flex-col gap-0">
                             <h1 className="text-[1rem]">Name</h1>
@@ -74,9 +85,12 @@ function Navbar({ isClicked, isLogged })
                     isLogged ? 
                     <>
                         <dd>
-                            <a href="#about" className={navItems}>
-                                Log Out
-                            </a>
+                        <button 
+                            className={navItems} 
+                            onClick={ handleLogout }
+                        >
+                            Log Out
+                        </button>
                         </dd>
                     </>
                     : ''

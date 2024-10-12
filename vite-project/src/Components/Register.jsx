@@ -1,6 +1,7 @@
 import TailorShop from "../assets/Tailor_shop_interior.jpg"
 import Logo from '../assets/Website-logo.png';
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 
 export default function Register()
@@ -13,6 +14,7 @@ export default function Register()
             password: ''
         }
     )
+    const navigate = useNavigate();
 
     function handleChange(event)
     {
@@ -26,22 +28,30 @@ export default function Register()
         console.log(formData);
     }
 
-    function handleRegister() {
-        // Check for a valid email, password length, and if the username is provided
-        if (
-            !(formData.email.includes('@')) ||
-            !(formData.email.includes('.')) ||
-            formData.email.length < 8 ||
-            formData.password.length < 8 ||
-            (formData.username.length() < 4)
-        )
-            setIsIncomplete(true);
-        else {
-            /* // Add user data to localStorage
-            const user = Math.random();
-            localStorage.setItem('user', JSON.stringify(formData));
-            */
-            setIsIncomplete(false); 
+    function handleToSite()
+    {
+        navigate('/')
+    }
+    
+    function handleRegister() 
+    {
+        function handleRegister(event) {
+            event.preventDefault();
+            
+            // Check for a valid email, password length, and if the username is provided
+            if (
+                !formData.email.includes('@') ||
+                !formData.email.includes('.') ||
+                formData.email.length < 8 ||
+                formData.password.length < 8 ||
+                formData.username.length < 4
+            ) {
+                setIsIncomplete(true);
+            } else {
+                setIsIncomplete(false);
+                // Navigate to login page
+                navigate('/login');
+            }
         }
     }
     
@@ -56,7 +66,7 @@ export default function Register()
                 <div className="w-full lg:w-[50%] h-full py-[1rem] px-[1rem]">
                     <div className="w-full flex flex-row justify-center py-4"><img src={Logo} className="w-[6rem] h-[6rem]" /></div>
                     <h1 className="text-3xl text-[#F28928] text-center font-medium pb-[1rem] capitalize">Let us know you!</h1>
-                    <form className="text-[#262626]">
+                    <form className="text-[#262626]" onSubmit={ handleRegister }>
                         <p className="pb-4 w-full flex flex-col items-center">
                             <label htmlFor="username" className="block pb-1 w-[80%] text-left">
                                 Email Id:
@@ -67,6 +77,7 @@ export default function Register()
                                 onChange={ handleChange }
                                 className="bg-stone-300 w-[80%] h-[2rem] focus:outline-none border-[#180101] rounded-md px-2 focus:border-b-2"
                                 autoComplete="username"
+                                required
                             />
                         </p>
                         <p className="pb-4 w-full flex flex-col items-center">
@@ -80,6 +91,7 @@ export default function Register()
                                 onChange={ handleChange }
                                 className="bg-stone-300 w-[80%] h-[2rem] focus:outline-none border-[#180101] rounded-md px-2 focus:border-b-2"
                                 autoComplete="username"
+                                required
                             />
                         </p>
 
@@ -94,15 +106,17 @@ export default function Register()
                                 onChange={ handleChange }
                                 className="bg-stone-300 w-[80%] h-[2rem] focus:outline-none border-[#180101] rounded-md px-2 focus:border-b-2"
                                 autoComplete="current-password"
+                                required
                             />
                         </p>
 
                         <p className="w-[90%] text-right pb-8 ">
-                            <button className="bg-[#262626] text-stone-100 px-4 py-2 rounded-md" onClick={ handleRegister }>
-                                <a href="/login">
-                                    Register
-                                </a>
+                            <button className="bg-[#262626] text-stone-100 px-4 py-2 rounded-md">
+                                Register
                             </button>
+                        </p>
+                        <p className="w-[100%] text-[#F28928] text-center pb-4">
+                            <button className="" onClick={handleToSite}>Back to Site</button>
                         </p>
                     </form>
                 </div>

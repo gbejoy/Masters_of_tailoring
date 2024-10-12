@@ -35,15 +35,7 @@ html {
       -2px 0 0 #161616,
       2px 2px 5px #161616;
 }
-ul {
-    display:block;
-    list-style-type: disc;
-    margin-top: 4px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 4px;
-  }
+  
 ::-webkit-scrollbar {
     width: 12px;
 }

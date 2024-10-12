@@ -14,20 +14,34 @@ function Navbar({ isClicked, isLogged })
         navigate('/login')
     }
 
+    function handleRegister()
+    {
+        navigate('/register')
+    }
+
+    function handleLogin()
+    {
+        navigate('/login')
+    }
+
     return (
         <div className={`p-1rem fixed top-full right-0 w-3/4 h-[calc(100svh-5rem)] bg-[#131313b5] backdrop-blur-[4px] md:hidden ${isClicked ? 'flex animated' : 'hidden'} flex-col items-start pl-[0.5rem] gap-[1rem] rounded-bl-[1.5rem]`}>
             <div className="text-stone-100 flex flex-col gap-1 pl-[1rem] lg:pl-[2rem] pt-[1rem]">
                 {!isLogged ? (
                     <>
-                        <button className={btnStyles}>
-                            <a href='/register' className='w-full h-full active:text-stone-100'>
-                                Sign Up
-                            </a>
+                        <button 
+                            className={btnStyles} 
+                            onClick={ handleRegister }
+                        >
+                            Sign up
                         </button>
                         <p className="text-[.75rem]">Already have an account? <button className={`${btnStyles} text-[0.75rem]`}>
-                            <a href='/login' className='w-full h-full active:text-stone-100'>
-                                Login
-                            </a>
+                        <button 
+                            className={btnStyles} 
+                            onClick={ handleLogin }
+                        >
+                            Login
+                        </button>
                             </button></p>
                     </>
                 ) : (

@@ -46,12 +46,12 @@ function Header({ isLogged })
 
     function handleRegister()
     {
-        navigate('/login')
+        navigate('/register')
     }
 
     function handleLogin()
     {
-        navigate('/register')
+        navigate('/login')
     }
 
     function handleLogout()

@@ -3,6 +3,7 @@ import About from "./About.jsx";
 import Masterpieces from "./Masterpieces.jsx";
 import Collections from "./Collections.jsx";
 import Materials from "./Materials.jsx";
+import Contact from "./Contact.jsx";
 
 function Site({ isSignedIn })
 {
@@ -13,6 +14,7 @@ function Site({ isSignedIn })
           <Masterpieces />
           <Collections />
           <Materials />
+          <Contact />
         </>
       )
 }

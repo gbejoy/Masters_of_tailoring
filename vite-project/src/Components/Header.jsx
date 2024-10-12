@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/Website-logo.png';
 import styles from './Header.module.css'
 import Navbar from './Navbar';
@@ -9,6 +10,7 @@ function Header({ isLogged })
 {
     const [ isHamClicked, setIsHamClicked ] = useState(false);
     const [ showUserMenu, setShowUserMenu ] = useState(false);
+    const navigate = useNavigate();
     const btnStyles = "capitalize blur-background rounded-[0.5rem] w-[5rem] py-2 bg-[#13131333] hover:text-[#F28928] shadow-text-light";
     const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
 
@@ -20,6 +22,22 @@ function Header({ isLogged })
     function handleUserMenu()
     {
         setShowUserMenu(prevState => !prevState);
+    }
+
+    function handleRegister()
+    {
+        navigate('/login')
+    }
+
+    function handleLogin()
+    {
+        navigate('/register')
+    }
+
+    function handleLogout()
+    {
+        // Logout
+        navigate('/login')
     }
 
     return (
@@ -61,15 +79,17 @@ function Header({ isLogged })
                 </dl>
                 <div className="text-stone-100 flex flex-row gap-2 pl-[1rem] lg:pl-[2rem] ">
                     { !isLogged ? <>
-                        <button className={btnStyles}>
-                            <a href='/login' className='w-full h-full active:text-stone-100'>
-                                Login
-                            </a>
+                        <button 
+                            className={btnStyles}
+                            onClick={ handleLogin }
+                        >
+                            Login
                         </button>
-                        <button className={btnStyles}>
-                            <a href='/register' className='w-full h-full active:text-stone-100'>
-                                Sign Up
-                            </a>
+                        <button 
+                            className={btnStyles}
+                            onClick={ handleRegister }    
+                        >
+                            Sign Up
                         </button>
                         </>
                         :
@@ -102,9 +122,12 @@ function Header({ isLogged })
                                                 </a>
                                             </dd>
                                             <dd>
-                                                <a className={navItems} href='/login'>
+                                                <button 
+                                                    className={navItems} 
+                                                    onClick={ handleLogout }
+                                                >
                                                     Log Out
-                                                </a>
+                                                </button>
                                             </dd>
                                         </dl>
                                     </div>

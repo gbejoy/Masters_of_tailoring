@@ -1,7 +1,15 @@
 import Suit1 from "../assets/Dragon-suit.png"
+import { useNavigate } from "react-router-dom";
 
 export default function ProductCard()
 {
+    const navigate = useNavigate();
+
+    function handleProductCard()
+    {
+        navigate('/product')
+    }
+
     const cardStyles = "h-[30%] w-[90%] xl:h-[90%] xl:w-[25%] bg-[#B7B7B7] rounded-[10px] xl:rounded-[20px] relative";
 
     return (
@@ -15,10 +23,11 @@ export default function ProductCard()
                 </div>
                 <div className='flex justify-between'>
                     <h2 className='text-[1rem] lg:text-[1.25rem]'>Price: $1200</h2>
-                    <button className='text-[#F28928] backdrop-blur-[6px] hover:text-stone-100 text-[1rem] lg:text-[1.25rem] cursor-pointer z-10'>
-                        <a href="/product">
-                            View
-                        </a>
+                    <button 
+                        className='text-[#F28928] backdrop-blur-[6px] hover:text-stone-100 text-[1rem] lg:text-[1.25rem] cursor-pointer z-10' 
+                        onClick={ handleProductCard }
+                    >
+                        View
                     </button>
                 </div>           
             </div>

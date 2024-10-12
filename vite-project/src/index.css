@@ -72,3 +72,8 @@ html {
 .blur-background {
     backdrop-filter: blur(10px);
 }
+
+.blur-background-max {
+    backdrop-filter: blur(30px);
+    background-color: #a97e5c44;
+}

@@ -13,7 +13,7 @@ function Header({ isLogged })
     const menuRef = useRef(null);
     const btnRef = useRef(null);
     const navigate = useNavigate();
-    const btnStyles = "capitalize blur-background rounded-[0.5rem] w-[5rem] py-2 bg-[#13131333] hover:text-[#F28928] shadow-text-light";
+    const btnStyles = "capitalize rounded-[0.5rem] w-[5rem] py-2 blur-background-max hover:text-[#F28928] shadow-text-light";
     const navItems = "capitalize text-[1rem] md:text-lg text-stone-100 shadow-text-light hover:text-[#F28928]";
 
     useEffect(() => {
